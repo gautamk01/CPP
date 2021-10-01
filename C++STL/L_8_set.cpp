@@ -25,7 +25,8 @@ int main()
     }
     cout << "\nis 52 is present in the set or not -> " << s.count(52) << endl;
     cout << "\nis 16 is present in the set or not -> " << s.count(16) << endl; //16 is not present because we just erase that out
-    set<int>::iterator it2 = s.find(42);
+    set<int>::iterator it2 = s.find(1);
+    cout << "The value is present at : " << *it2 << endl;
     for (auto i = it2; i != s.end(); i++)
     {
         cout << *i << " ";
