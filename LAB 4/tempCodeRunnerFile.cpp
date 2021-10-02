@@ -1,1 +1,1 @@
-    s.pop();
+    // cout << Q[1] << endl;
