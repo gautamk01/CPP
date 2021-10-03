@@ -1,1 +1,1 @@
-it1++;
+    // cout << "Is the stack is empty : " << s.empty() << endl;

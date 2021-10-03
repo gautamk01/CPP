@@ -21,10 +21,9 @@ int main()
         max.pop();
     }
     cout << endl;
-    min.push(68);
-    min.push(12);
+    min.push(23);
+    min.push(14);
     min.push(52);
-    min.push(25);
     int m = min.size();
     for (int i = 0; i < m; i++)
     {
