@@ -11,6 +11,7 @@ int main()
     s.insert(52);
     s.insert(16);
     s.insert(16);
+
     for (int i : s)
     {
         cout << i << " ";
