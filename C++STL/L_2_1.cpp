@@ -14,7 +14,7 @@ int main()
     cout << "Print the vector 2 : " << endl;
     for (int i : v)
     {
-        cout << v << " ";
+        cout << i << " ";
     }
     cout << endl;
     cout << "\nprinting the copy of vector 2\n";
