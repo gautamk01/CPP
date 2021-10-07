@@ -2,14 +2,7 @@
 #include <bits/stdc++.h>
 #include <set>
 using namespace std;
-// void print_set(set<int> s1)
-// {
-//     cout << "Set : " << endl;
-//     for (int i : s1)
-//     {
-//         cout << i << " ";
-//     }
-// }
+
 int main()
 {
     multiset<int> s1;

@@ -47,8 +47,13 @@ int main()
 {
     array<int, size_1> Q;
     insertion(1, Q);
-    insertion(2, Q);
-    insertion(3, Q);
+    insertion(24, Q);
+    insertion(37, Q);
+    insertion(323, Q);
+    deletion(Q);
+    deletion(Q);
+    insertion(215, Q);
+    insertion(95, Q);
     display_queue(Q);
     return 0;
 }

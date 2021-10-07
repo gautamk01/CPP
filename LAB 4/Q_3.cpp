@@ -2,7 +2,7 @@
 #include <stack>
 using namespace std;
 
-void printstack(stack<int> &s)
+void printstack(stack<int> s)
 {
     int n = s.size();
     for (int i = 0; i < n; i++)
@@ -11,7 +11,7 @@ void printstack(stack<int> &s)
         s.pop();
     }
 }
-void sortstack(stack<int> &s, stack<int> &temp_s)
+void sortstack(stack<int> s, stack<int> &temp_s)
 {
     while (!s.empty())
     {
@@ -34,9 +34,11 @@ int main()
     s.push(98);
     s.push(92);
     s.push(23);
+    sortstack(s, temp);
+    cout << "input : ";
     printstack(s);
     cout << endl;
-    sortstack(s, temp);
+    cout << "output : ";
     printstack(temp);
 
     return 0;

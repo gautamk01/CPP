@@ -17,15 +17,12 @@ void mapper()
 
 void wordsCount(string str)
 {
-    //key value pair map
-    //key = word, value = count
 
-    //extract words and push in map
+    //spilte the string by white space
     istringstream wordStream(str);
 
     string word;
-    //Extract each words and add to map
-    //if it does not exist in map
+
     while (wordStream >> word)
     {
         v.push_back(word);
@@ -35,7 +32,7 @@ void wordsCount(string str)
 int main()
 {
 
-    wordsCount("hello world gautam gautam hello");
+    wordsCount("Hello world This is amazing world");
     mapper();
     for (auto &mp : wordsMap)
     {
