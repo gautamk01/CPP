@@ -43,7 +43,7 @@ int main()
 {
     solid s1;
     s1.volume(4);
-    s1.volume(float(5.4));
+    s1.volume(float(2.4));
     s1.volume(28.2, 38.4);
     s1.volume(1, 14, 5);
     s1.display();

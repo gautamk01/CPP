@@ -20,12 +20,14 @@ public:
         complex temp;
         temp.real = c1.real + c2.real;
         temp.img = c1.img + c2.img;
+        return temp;
     }
     complex multi(complex c1, complex c2)
     {
         complex temp;
         temp.real = (c1.real * c2.real) - (c1.img * c2.img);
         temp.img = (c1.real * c2.img) + (c1.img * c2.real);
+        return temp;
     }
 
     void printing()

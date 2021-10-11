@@ -1,1 +1,1 @@
-class DB;
+cout << keyi;

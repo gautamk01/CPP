@@ -1,20 +1,33 @@
 #include <iostream>
-#include <cstdlib>
 using namespace std;
+class Distance
+{
+private:
+    int dis;
 
+public:
+    Distance()
+    {
+        dis = 0;
+    }
+    void display()
+    {
+        cout << "The distance is " << dis << endl;
+    }
+
+    friend void add(Distance &d);
+};
+
+void add(Distance &d)
+{
+    d.dis = d.dis + 5;
+}
 int main()
 {
-    int array[1000];
-    int N;
-    cin >> N;
-    for (int i = 0; i < N; i++)
-    {
-        cin >> array[i];
-    }
-    for (int i = N - 1; i > -1; i--)
-    {
-        cout << array[i] << " ";
-    }
+    Distance d1;
+    d1.display();
+    add(d1);
+    d1.display();
 
     return 0;
 }

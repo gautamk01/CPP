@@ -75,8 +75,8 @@ public:
 };
 int main()
 {
-    time T1(2, 3, 7);
-    time T2(3, 2, 1);
+    time T1(12, 3, 7);
+    time T2(11, 2, 1);
     time T3 = T3.add(T1, T2);
 
     cout << "Time 1 ->";
