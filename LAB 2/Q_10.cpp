@@ -1,32 +1,64 @@
+
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+class engineer;
+class doctor
+{
+    int ds;
+
+public:
+    void input()
+    {
+        cout << "\nenter doctors salary : ";
+        cin >> ds;
+    }
+    void display()
+    {
+        cout << " \nsalary of doctor : " << ds;
+    }
+    friend class incometax;
+};
+
+class engineer
+{
+    int es;
+
+public:
+    void input()
+    {
+        cout << "\nenter engineer salary : ";
+        cin >> es;
+    }
+    void display()
+    {
+        cout << "\nsalary of engineer : " << es;
+    }
+    friend class incometax;
+};
 
 class incometax
 {
 private:
-    int tax;
-
-protected:
-    int income;
-    char cname[20];
+    int d_tax;
+    int e_tax;
 
 public:
-    incometax()
+    void tax_dis()
     {
-        tax = 0;
-        income = 0;
-    }
-    void input()
-    {
-        cout << "\nEnter Client Name : ";
-        cin >> cname;
-        cout << "\nEnter your income : ";
-        cin >> income;
+        doctor d;
+        engineer e;
+        d.input();
+        e.input();
+        e.display();
+        d.display();
+        cout << "\nTax for doctor:" << calc_tax(d.ds) << endl;
+        cout << "Tax for engineer :" << calc_tax(e.es) << endl;
     }
 
-    int calc_tax(int income)
+    unsigned calc_tax(int income)
     {
-        this->income = income;
+        double tax;
         if (income <= 50000.00)
             tax = 0;
         else if (income <= 100000.00)
@@ -37,34 +69,14 @@ public:
             tax = (income - 250000.00) * 30 / 100 + 5000 + 30000;
         return tax;
     }
-    void display()
-    {
-        cout << "\n Client Name " << cname;
-        cout << "\n income " << income;
-        cout << "\n tax " << calc_tax(income);
-    }
-    friend int doctor(incometax);
-    friend int engineer(incometax);
 };
-int doctor(incometax doc)
-{
-    doc.income = 2000000;
-}
-int engineer(incometax eng)
-{
-    eng.income = 3000000;
-}
 
 int main()
 {
-    incometax d1;
-    doctor(d1);
-    d1.input();
-    d1.display();
-    incometax e1;
-    engineer(e1);
-    e1.input();
-    e1.display();
+    engineer e;
+    doctor d;
+    incometax i;
+    i.tax_dis();
 
     return 0;
-}
+};
