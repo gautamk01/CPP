@@ -2,7 +2,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-class engineer;
+
 class doctor
 {
     int ds;
@@ -56,25 +56,24 @@ public:
         cout << "Tax for engineer :" << calc_tax(e.es) << endl;
     }
 
-    unsigned calc_tax(int income)
+    double calc_tax(int income)
     {
         double tax;
         if (income <= 50000.00)
             tax = 0;
         else if (income <= 100000.00)
-            tax = (income - 50000.00) * 10 / 100;
+            tax = (income - 50000.00) * 10 / 100.0;
         else if (income <= 250000.00)
-            tax = (income - 100000.00) * 20 / 100 + 5000;
+            tax = ((income - 100000.00) * 20 / 100.0) + 5000;
         else
-            tax = (income - 250000.00) * 30 / 100 + 5000 + 30000;
+            tax = ((income - 250000.00) * 30 / 100.0) + 5000 + 30000;
         return tax;
     }
 };
 
 int main()
 {
-    engineer e;
-    doctor d;
+
     incometax i;
     i.tax_dis();
 
