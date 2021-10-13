@@ -1,1 +1,1 @@
-cout << keyi;
+if (balance < 500)

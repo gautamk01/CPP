@@ -7,7 +7,7 @@ class Account
 
 public:
     string customer_name;
-    long Account_numb, balance = 0;
+    long Account_numb, balance;
     char type_account;
     void get()
     {
@@ -33,7 +33,18 @@ public:
         int amt;
         cout << "\nenter the amount which you want to deposit:";
         cin >> amt;
-        balance += amt;
+        cout << "Balance : " << balance << endl;
+        balance = balance + amt;
+    }
+    void withdraw()
+    {
+        int amt;
+        cout << "\nenter the amount which do you want to withdraw:";
+        cin >> amt;
+        if (balance > amt)
+            balance -= amt;
+        else
+            cout << "\namount can't be withdrawn due to insufficient balance";
     }
 };
 
@@ -51,16 +62,6 @@ public:
         cout << intr;
         balance += intr;
     }
-    void withdraw()
-    {
-        int amt;
-        cout << "\nenter the amount which do you want to withdraw:";
-        cin >> amt;
-        if (balance > amt)
-            balance -= amt;
-        else
-            cout << "\namount can't be withdrawn due to insufficient balance";
-    }
 };
 class sav_acct : public Account
 {
@@ -73,21 +74,7 @@ public:
         }
         else
         {
-            cout << "\nno penalty imposed";
-        }
-    }
-    void withdraw()
-    {
-        int amt;
-        cout << "\nenter amount to be withdrawn:";
-        cin >> amt;
-        if (amt > balance)
-        {
-            cout << "amount can't be withdrawn due to insufficient balance\n";
-        }
-        else
-        {
-            balance -= amt;
+            cout << "\nno penalty imposed\n";
         }
     }
 };
@@ -104,6 +91,7 @@ int main()
         c1.type_account = A1.type_account;
         c1.customer_name = A1.customer_name;
         c1.Account_numb = A1.Account_numb;
+        c1.balance = A1.balance;
         c1.deposit();
         c1.withdraw();
         c1.display();
@@ -113,8 +101,10 @@ int main()
         s1.type_account = A1.type_account;
         s1.customer_name = A1.customer_name;
         s1.Account_numb = A1.Account_numb;
+        s1.balance = A1.balance;
         s1.deposit();
         s1.withdraw();
+        s1.min_bal();
         s1.display();
     }
 
