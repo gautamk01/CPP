@@ -7,9 +7,10 @@ int main()
     mylist.push_back(23);
     mylist.push_back(32);
     mylist.pop_front();
-    mylist.push_back(62);
-    mylist.push_front(72);
-    mylist.push_front(12);
+    mylist.push_back(12);
+    mylist.push_back(114);
+    mylist.push_front(52);
+    mylist.push_front(432);
     mylist.pop_back();
 
     for (auto i : mylist)
