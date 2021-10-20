@@ -27,7 +27,7 @@ public:
     {
         length = 0;
         breadth = 0;
-    }
+        }
 
     void printer()
     {
@@ -38,9 +38,9 @@ public:
 
 int main()
 {
-    Rectangle R1;
-    Rectangle R2 = Rectangle(40, 10);
-    Rectangle R3 = Rectangle(R2);
+    Rectangle R1;                     //default constructor
+    Rectangle R2 = Rectangle(40, 10); //parametric constructor
+    Rectangle R3 = Rectangle(R2);     //copy constructor
     R1.printer();
     R2.printer();
     R3.printer();

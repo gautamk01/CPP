@@ -8,7 +8,6 @@ private:
     int img;
 
 public:
-    void mutica();
     complex(int tempreal = 0, int tempimag = 0)
     {
         real = tempreal;

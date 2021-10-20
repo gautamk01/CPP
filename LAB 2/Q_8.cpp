@@ -9,6 +9,7 @@ public:
     string customer_name;
     long Account_numb, balance;
     char type_account;
+
     void get()
     {
         cout << "Enter the Customer Name : ";

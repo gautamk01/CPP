@@ -2,7 +2,7 @@
 // #include <conio.h>
 using namespace std;
 
-class DB;
+class DF;
 class DM
 {
     float meter, centi;
@@ -18,9 +18,9 @@ public:
         cout << "\nThe distance is:";
         cout << meter << " meters and " << centi << " centimeter";
     }
-    friend void add(DM &, DB &);
+    friend void add(DM &, DF &);
 };
-class DB
+class DF
 {
     float inch, feet;
 
@@ -35,9 +35,9 @@ public:
         cout << "\nThe distance is:";
         cout << feet << " feet and " << inch << " inch";
     }
-    friend void add(DM &, DB &);
+    friend void add(DM &, DF &);
 };
-void add(DM &a, DB &b)
+void add(DM &a, DF &b)
 {
     int ch;
     cout << "\nPress 1 for meter-centi: ";
@@ -62,7 +62,7 @@ void add(DM &a, DB &b)
     }
     else
     {
-        DB d;
+        DF d;
         int i = (a.meter * 39.37 + a.centi * .3937008 + b.feet * 12 + b.inch);
         if (i >= 12)
         {
@@ -81,7 +81,7 @@ int main()
 {
     system("cls");
     DM a;
-    DB b;
+    DF b;
     a.getdata();
     b.getdata();
     add(a, b);
