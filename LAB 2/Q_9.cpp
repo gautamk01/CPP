@@ -13,6 +13,7 @@ public:
         cout << "\nEnter the distance in(meter-centimeter):";
         cin >> meter >> centi;
     }
+
     void display()
     {
         cout << "\nThe distance is:";
@@ -37,6 +38,7 @@ public:
     }
     friend void add(DM &, DF &);
 };
+
 void add(DM &a, DF &b)
 {
     int ch;
