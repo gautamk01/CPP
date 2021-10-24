@@ -33,20 +33,28 @@ public:
 
 int main()
 {
-    char key; //char
-    int keyi; //int
+    char char_choice; //char variable
+    int int_choice;   //int variable
     tollBooth TB1;
-    while (key != 27) //char esc==27
+    while (char_choice != 27) //char esc==27
     {
         cout << "1.Paying Cars" << endl;
         cout << "2.Non Paying Cars" << endl;
         cout << "Your choice : ";
-        key = getch();
-        if (key != 27)
+        char_choice = getch();
+        if (char_choice != 27)
         {
-            keyi = key - '0'; // covnvertion of char value to int
-            cout << keyi;
-            switch (keyi)
+            int_choice = char_choice - '0';
+            if (int_choice == 1 || int_choice == 2)
+            {
+                cout << int_choice;
+            }
+            else
+            {
+                cout << "invalide key";
+            }
+
+            switch (int_choice)
             {
             case 1:
                 TB1.paying_car();

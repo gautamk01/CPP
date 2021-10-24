@@ -34,7 +34,6 @@ public:
         int amt;
         cout << "\nenter the amount which you want to deposit:";
         cin >> amt;
-        // cout << "Balance : " << balance << endl;
         balance = balance + amt;
     }
     void withdraw()

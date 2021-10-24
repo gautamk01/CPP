@@ -41,12 +41,12 @@ public:
 
 void add(DM &a, DF &b)
 {
-    int ch;
+    int choice;
     cout << "\nPress 1 for meter-centi: ";
     cout << "\nPress 2 for feet-inch: ";
     cout << "\nEnter your choice: ";
-    cin >> ch;
-    if (ch == 1)
+    cin >> choice;
+    if (choice == 1)
     {
         DM d;
         int c = (a.meter * 100 + a.centi + b.feet * 30.48 + b.inch * 2.54);

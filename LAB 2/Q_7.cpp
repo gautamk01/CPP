@@ -8,10 +8,10 @@ private:
     int img;
 
 public:
-    complex(int tempreal = 0, int tempimag = 0)
+    complex(int t_real = 0, int t_imag = 0)
     {
-        real = tempreal;
-        img = tempimag;
+        real = t_real;
+        img = t_imag;
     }
 
     complex operator+(complex c2)
@@ -35,10 +35,11 @@ public:
         cout << real << " + " << img << "i";
     }
 };
+
 int main()
 {
-    complex c1(4, 7);
-    complex c2(1, 2);
+    complex c1;
+    complex c2;
     complex c3 = c1 + c2;
     complex c4 = c1 - c2;
     cout << "Complex 1 :";

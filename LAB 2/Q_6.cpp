@@ -15,11 +15,11 @@ public:
         this->minutes = 0;
         this->second = 0;
     }
-    time(int h, int m, int s)
+    time(int hours, int minutes, int second)
     {
-        this->hours = h;
-        this->minutes = m;
-        this->second = s;
+        this->hours = hours;
+        this->minutes = minutes;
+        this->second = second;
     }
     void display()
     {
