@@ -8,7 +8,12 @@ private:
     int img;
 
 public:
-    complex(int tempreal = 0, int tempimag = 0)
+    complex()
+    {
+        real = 0;
+        img = 0;
+    }
+    complex(int tempreal, int tempimag)
     {
         real = tempreal;
         img = tempimag;

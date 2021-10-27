@@ -8,7 +8,12 @@ private:
     int img;
 
 public:
-    complex(int t_real = 0, int t_imag = 0)
+    complex()
+    {
+        real = 0;
+        img = 0;
+    }
+    complex(int t_real, int t_imag)
     {
         real = t_real;
         img = t_imag;
@@ -38,8 +43,8 @@ public:
 
 int main()
 {
-    complex c1;
-    complex c2;
+    complex c1(2, 5);
+    complex c2(3, 5);
     complex c3 = c1 + c2;
     complex c4 = c1 - c2;
     cout << "Complex 1 :";

@@ -130,7 +130,6 @@ int main()
             c1.customer_name = A1.customer_name;
             c1.Account_numb = A1.Account_numb;
             c1.balance = A1.balance;
-
             int key;
             while (key != 4)
             {
@@ -167,7 +166,6 @@ int main()
             s1.customer_name = A1.customer_name;
             s1.Account_numb = A1.Account_numb;
             s1.balance = A1.balance;
-            s1.update_bal();
             int key;
             while (key != 4)
             {

@@ -51,7 +51,7 @@ public:
         e.input();
         e.display();
         d.display();
-        cout << "\nTax for doctor:" << calc_tax(d.ds) << endl;
+        cout << "\nTax for doctor :" << calc_tax(d.ds) << endl;
         cout << "Tax for engineer :" << calc_tax(e.es) << endl;
     }
 
