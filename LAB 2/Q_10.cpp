@@ -43,10 +43,8 @@ private:
     int e_tax;
 
 public:
-    void tax_dis()
+    void tax_dis(doctor d, engineer e)
     {
-        doctor d;
-        engineer e;
         d.input();
         e.input();
         e.display();
@@ -74,7 +72,9 @@ int main()
 {
 
     incometax i;
-    i.tax_dis();
+    doctor D;
+    engineer E;
+    i.tax_dis(D, E);
 
     return 0;
 };

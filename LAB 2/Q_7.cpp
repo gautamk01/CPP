@@ -43,8 +43,8 @@ public:
 
 int main()
 {
-    complex c1(2, 5);
-    complex c2(3, 5);
+    complex c1(6, 9);
+    complex c2(8, 3);
     complex c3 = c1 + c2;
     complex c4 = c1 - c2;
     cout << "Complex 1 :";
