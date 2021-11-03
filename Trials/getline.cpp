@@ -1,27 +1,16 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 int main()
 {
-    int x, y, z;
-
-    cout << "Enter any two numbers" << endl;
-    cin >> x;
-    cin >> y;
-    try
+    vector<int> v(4, 0);
+    for (int i = 0; i < v.size(); i++)
     {
-        if (y == 0)
-        {
-            throw y;
-        }
-        else
-        {
-            float z = x / y;
-            cout << "Result is:" << z;
-        }
+        cin >> v[i];
     }
-    catch (int y)
+    for (int i : v)
     {
-        cout << "Exception Caught \n";
+        cout << i << endl;
     }
     return 0;
 }
