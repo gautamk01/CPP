@@ -38,10 +38,13 @@ public:
 
 int main()
 {
-    smartphone *G1 = new android();
+    smartphone *G1;
+    android A1;
+    G1 = &A1;
     smartphone *I1 = new iphone();
     I1->takeselfi();
     G1->takeselfi();
-
+    I1->makecall();
+    G1->makecall();
     return 0;
 }

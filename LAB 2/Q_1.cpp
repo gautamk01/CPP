@@ -12,7 +12,7 @@ public:
     {
         real = 0;
         img = 0;
-    }
+        }
     complex(int tempreal, int tempimag)
     {
         real = tempreal;

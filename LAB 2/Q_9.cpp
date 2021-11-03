@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 class DF;
@@ -18,7 +19,7 @@ public:
         cout << "\nThe distance is:";
         cout << meter << " meters and " << centi << " centimeter";
     }
-    friend void add(DM &, DF &);
+    friend void add(DM, DF);
 };
 class DF
 {
@@ -35,10 +36,10 @@ public:
         cout << "\nThe distance is:";
         cout << feet << " feet and " << inch << " inch";
     }
-    friend void add(DM &, DF &);
+    friend void add(DM, DF);
 };
 
-void add(DM &a, DF &b)
+void add(DM a, DF b)
 {
     int choice;
     cout << "\nPress 1 for meter-centi: ";
@@ -48,11 +49,11 @@ void add(DM &a, DF &b)
     if (choice == 1)
     {
         DM d;
-        int c = (a.meter * 100 + a.centi + b.feet * 30.48 + b.inch * 2.54);
+        double c = (a.meter * 100 + a.centi + b.feet * 30.48 + b.inch * 2.54);
         if (c >= 100)
         {
-            d.meter = c / 100;
-            d.centi = c % 100;
+            d.meter = c / 100.0;
+            d.centi = fmod(c, 100);
         }
         else
         {
@@ -64,11 +65,11 @@ void add(DM &a, DF &b)
     else
     {
         DF d;
-        int i = (a.meter * 39.37 + a.centi * .3937008 + b.feet * 12 + b.inch);
+        double i = (a.meter * 39.37 + a.centi * .3937008 + b.feet * 12 + b.inch);
         if (i >= 12)
         {
-            d.feet = i / 12;
-            d.inch = i % 12;
+            d.feet = i / 12.0;
+            d.inch = fmod(i, 12);
         }
         else
         {

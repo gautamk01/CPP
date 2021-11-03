@@ -22,10 +22,6 @@ public:
     {
         cout << "I am playing classical Guitar " << endl;
     }
-    void music1()
-    {
-        cout << "I am playing classical Guitar " << endl;
-    }
 };
 
 int main()
