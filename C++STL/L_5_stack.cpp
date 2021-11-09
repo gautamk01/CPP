@@ -1,35 +1,57 @@
 #include <iostream>
 #include <stack>
 using namespace std;
-void print_stack(stack<int> s2)
+void print_stack(stack<int> s2, int size)
 {
-    for (int i = 0; i < s2.size(); i++)
+
+    for (int i = 0; i < size; i++)
     {
         cout << s2.top() << " ";
         s2.pop();
     }
 }
 
+stack<int> sortFunction(stack<int> &mainStack)
+{
+    stack<int> AuxStack;
+
+    while (!mainStack.empty())
+    {
+        // pop out the first element
+        int temp = mainStack.top();
+        mainStack.pop();
+
+        while (!AuxStack.empty() && AuxStack.top() > temp)
+        {
+            // pop from Auxstack and push it to the mainstack
+            mainStack.push(AuxStack.top());
+            AuxStack.pop();
+        }
+
+        // push temp in end
+        AuxStack.push(temp);
+    }
+
+    return AuxStack;
+}
+
 int main()
 {
-    stack<string> s;
-    stack<int> s2;
-    s2.push(13);
-    s2.push(15);
-    s2.push(178);
-    int si = s2.size();
-    for (int i = 0; i < si; i++)
+    int n;
+    int element;
+    int k;
+    stack<int> s;
+    cin >> n;
+    for (int i = 0; i < n; i++)
     {
-        cout << s2.top() << " ";
-        s2.pop();
+        cin >> element;
+        s.push(element);
     }
-    // s.push("Gautam");
-    // s.push("Spider-man");
-    // s.push("super-man");
-    // cout << "Top Element : " << s.top() << endl;
-    // s.pop();
-    // cout << "Top Element : " << s.top() << endl;
-    // cout << "The size of stack :" << s.size() << endl;
-    // cout << "Is the stack is empty : " << s.empty() << endl;
+    cin >> k;
+    int size = s.size();
+    print_stack(s, size);
+    cout << endl;
+    stack<int> sort_stack = sortFunction(s);
+    print_stack(sort_stack, k);
     return 0;
 }

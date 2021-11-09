@@ -10,7 +10,7 @@ int main()
     s.insert(42);
     s.insert(52);
     s.insert(16);
-    s.insert(16);
+    s.insert(12);
 
     for (int i : s)
     {
@@ -20,7 +20,7 @@ int main()
     set<int>::iterator it1 = s.begin();
     it1++;
     s.erase(it1); //erase the 1th element of the set
-    for (auto i : s)
+    for (int i : s)
     {
         cout << i << " ";
     }

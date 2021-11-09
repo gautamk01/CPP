@@ -1,1 +1,1 @@
-    // cout << "Is the stack is empty : " << s.empty() << endl;
+    print_stack(s2);

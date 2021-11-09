@@ -2,7 +2,7 @@
 #include <queue>
 using namespace std;
 
-void printqueue(queue<string> q)
+void printqueue(queue<string> &q)
 {
     while (!q.empty())
     {

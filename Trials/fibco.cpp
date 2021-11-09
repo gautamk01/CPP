@@ -53,7 +53,7 @@ int main()
     {
         cout << endl;
         cout << "1.function activatior" << endl;
-        cout << "2.find a1 and b1" << endl;
+        cout << "2.FIBANOCCI" << endl;
         cout << "3. stop" << endl;
         cout << "Enter your choice :";
         cin >> choice;
