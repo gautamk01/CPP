@@ -46,8 +46,9 @@ void add(DM a, DF b)
     cout << "\nPress 2 for feet-inch: ";
     cout << "\nEnter your choice: ";
     cin >> choice;
-    if (choice == 1)
+    switch (choice)
     {
+    case 1:
         DM d;
         double c = (a.meter * 100 + a.centi + b.feet * 30.48 + b.inch * 2.54);
         if (c >= 100)
@@ -61,27 +62,31 @@ void add(DM a, DF b)
             d.centi = c;
         }
         d.display();
-    }
-    else
-    {
-        DF d;
+        break;
+    case 2:
+        DF temp;
         double i = (a.meter * 39.37 + a.centi * .3937008 + b.feet * 12 + b.inch);
         if (i >= 12)
         {
-            d.feet = i / 12.0;
-            d.inch = fmod(i, 12);
+            temp.feet = i / 12.0;
+            temp.inch = fmod(i, 12);
         }
         else
         {
-            d.feet = 0;
-            d.inch = i;
+            temp.feet = 0;
+            temp.inch = i;
         }
-        d.display();
+        temp.display();
+
+        break;
+
+    default:
+        cout << "Choose the correct option";
+        break;
     }
 }
 int main()
 {
-    system("cls");
     DM a;
     DF b;
     a.getdata();

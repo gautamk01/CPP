@@ -83,18 +83,18 @@ class cur_acct : public Account
 public:
     int min_bal()
     {
-        int ret = 1;
+        int check = 1;
         if (balance <= 500)
         {
             penal = 50;
             balance -= penal;
-            ret = 0;
+            check = 0;
         }
         else
         {
             cout << "\n No penality imposed";
         }
-        return ret;
+        return check;
     }
     void withdrawal()
     {
