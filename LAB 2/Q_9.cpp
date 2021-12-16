@@ -21,6 +21,7 @@ public:
     }
     friend void add(DM, DF);
 };
+
 class DF
 {
     float inch, feet;
